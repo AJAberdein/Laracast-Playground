@@ -11,23 +11,23 @@
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('welcome', function () {
     $pokemon = ['Rufflet', 'Litten', 'Popplio'];
     return view('welcome', ['pokemon' => $pokemon]);
     //alternitive syntax to return a view with a variable inclides: with(), withpokemon and compact('pokemon')
 
 });
 
-Route::get('about', function () {
-    return view('pages.about');
+Route::get('/', function () {
+    return view('welcome');
 });
 
 
 
-Route::get('/', 'PageController#home');
+//Route::get('home', 'PageController#home');
 
 
 
-Route::get('jokeYoMomma', 'JokeController#jokeYoMomma');
+//Route::get('jokeYoMomma', 'JokeController#jokeYoMomma');
 
-Route::get('jokeBad', 'JokeController#jokeBad');
+//Route::get('jokeBad', 'JokeController#jokeBad');
