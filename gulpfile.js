@@ -9,18 +9,8 @@ var elixir = require('laravel-elixir');
  | for your Laravel application. By default, we are compiling the Sass
  | file for our application, as well as publishing vendor resources.
  |
- | install node by hitting a quick npm install -----returns---->node_modules
- |
- | sass
- | less
- | scripts
- | browserify
- | copy
- | exec (executes a shell script)
- |
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss')
-        .version('css/app.css');
+    mix.sass('app.scss');
 });

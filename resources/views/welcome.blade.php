@@ -1,50 +1,45 @@
-@extends('layout')
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laravel</title>
 
-@section(header)
-    <!--Code for header section-->
-@stop
+        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
+        <style>
+            html, body {
+                height: 100%;
+            }
 
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: table;
+                font-weight: 100;
+                font-family: 'Lato';
+            }
 
-@section('content')
+            .container {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
 
-<div class="container">
-    <div class="content">
+            .content {
+                text-align: center;
+                display: inline-block;
+            }
 
-        <h1>Welcome Page</h1>
-
-        @if (empty($pokemon))
-
-            <p>There are no pokemon</p>
-
-        @elseif
-
-            <p>There are pokemon</p>
-
-        @endif
-
-    <!--  ! Not true or !if -->
-        @unless (empty($pokemon))
-
-            <p>Yes, There are indeed pokemon!</p>
-
-        @endunless
-
-        @foreach ($pokemon as $pokes)
-
-            <li>{{ $pokes }}</li>
-
-        @endforeach
-
-
-    </div>
-
-</div>
-
-@stop
-
-@section('footer')
-    <!--Not sure this will work, can sections be nested?????-->
-    <script>alert('This is the footer for the welcome page only')</script>
-    <p>This is the footer...</p>
-@stop
+            .title {
+                font-size: 96px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="title">Laravel 5</div>
+            </div>
+        </div>
+    </body>
+</html>
