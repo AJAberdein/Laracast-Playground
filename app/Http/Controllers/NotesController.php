@@ -78,7 +78,23 @@ class NotesController extends Controller
         //Not necesary to pass request as a parameter
 
 
+    }
 
+    public function edit(Note $note) {
+
+        return view('notes.edit', compact('note'));
+
+    }
+
+    public function update(Request $request, Note $note) {
+
+
+        //'dying dump' or something like that. Great for debugging!!!!
+        //dd('hit');
+
+        $note->update($request->all());
+
+        return back();
 
     }
 
