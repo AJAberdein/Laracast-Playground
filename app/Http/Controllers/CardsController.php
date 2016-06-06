@@ -26,6 +26,16 @@ class CardsController extends Controller
 
         //$card = Card::find($id);
 
+        //struggling to create user for notes, similar function as note for cards???
+
+        //$card = Card::with('notes.user')->find(2);
+
+        //Can't get notes to register a user in the json restful api???
+
+        $card->load('notes.user');
+
+        //return $card;
+
         return view('cards.show', compact('card'));
 
     }
